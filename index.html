@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SilentMover</title>
+    <script src="port.js"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
-        <h2>Silent<em>Mover</em></h2>
-        <nav>
+        <a class="logo" href="#hero" aria-label="SilentMover home"><h2>Silent<em>Mover</em></h2></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+        <nav id="site-nav">
             <ul>
-                <li><a href="#hero">Home</a></li>
+                <li><a href="">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#prs">Projects</a></li>
@@ -20,34 +26,38 @@
         </nav>
     </header>
     <section class="hero" id="hero">
-        <div class="wrapp">
+        <div class="hero-inner">
             <div class="hero-content">
-            <h3>Haningtone Omondi</h3>
-            <h3>Full Stack Developer</h3>
-            <p>A Passionate Developer Who Loves Coding</p>
-            <p>I am currently sharpening my skills in backend development and build projects that solve real problems.</p>
-            <p>Based in Nairobi, Kenya, currently open to junior internship opportunities</p>
-            <div class="cta">
-            <a href="" class="btn">View My Work</a>
-            <a href="" class="btn">Get In Touch</a>
-        </div>
-        </div>
-        <div class="image-container">
-            <div class="image">
-                <img src="profile.jpg" alt="Hero Image">
+                <p class="hero-kicker"><span></span> Available for junior opportunities</p>
+                <h1>Hi, I’m <span>Haningtone<br class="desktop-break"> Omondi.</span></h1>
+                <h2 class="hero-role"><span class="hero-role-text">Full Stack Developer</span></h2>
+                <p class="hero-lead">I build thoughtful digital experiences and practical tools that solve real problems. I’m currently sharpening my backend skills and growing with every project.</p>
+                <p class="hero-location"><span aria-hidden="true">⌖</span> Based in Nairobi, Kenya</p>
+                <div class="cta">
+                    <a href="#prs" class="btn btn-primary">Explore my work <span aria-hidden="true">↗</span></a>
+                    <a href="#cont" class="btn btn-secondary">Get in touch</a>
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="image">
+                    <img src="profile.jpg" alt="Haningtone Omondi">
+                </div>
+                <div class="hero-badge"><span>Building</span><strong>with purpose</strong></div>
             </div>
         </div>
-        </div>
-        
     </section>
-    <section class="about" id="about">
-        <div class="about">
-            <h3>About Me</h3>
-            <p>I am a passionate and dedicated full-stack developer with a strong focus on backend development. I enjoy building projects that solve real-world problems and continuously strive to improve my skills.
-                <br> Based in Nairobi, Kenya, I am currently seeking junior internship opportunities to further enhance my expertise and contribute to meaningful projects.</p>
+    <section class="about-section" id="about">
+        <div class="about-copy">
+            <p class="about-eyebrow">A little about me</p>
+            <h2>Curious by nature.<br><span>Developer by choice.</span></h2>
+            <p class="about-description">I’m a passionate full-stack developer with a strong focus on backend development. I enjoy turning ideas into useful, reliable projects and keep learning by building things that solve real-world problems.</p>
+            <p class="about-description">Based in Nairobi, Kenya, I’m looking for a junior internship where I can contribute, grow my skills, and work with a team that cares about what it builds.</p>
+            <a class="about-link" href="#cont">Let’s work together <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="a-image">
-            <img src="profile.jpg" alt="About Image">
+        <div class="about-visual">
+            <div class="about-photo"><img src="profile.jpg" alt="Haningtone Omondi"></div>
+            <div class="about-note"><span class="about-note-icon" aria-hidden="true">✦</span><span><strong>Nairobi, Kenya</strong><small>Open to junior opportunities</small></span></div>
+            <div class="about-orbit" aria-hidden="true"></div>
         </div>
     </section>
     <section class="skills" id="skills">
@@ -55,31 +65,38 @@
         <div class="skills-container">
             <div class="skill">
                 <h4>Frontend Development</h4>
-                <div class="box-1">
-                    <div class="box"> <img src="" alt=""></div>
-                    <div class="box"> <img src="" alt=""></div>
-                </div>
-                <div class="box-1">
-                    <div class="box"> <img src="" alt=""></div>
-                    <div class="box"> <img src="" alt=""></div>
+                <div class="skill-items">
+                    <div class="skill-item"><img src="html.jpeg" alt=""><span>HTML</span></div>
+                    <div class="skill-item"><img src="css.jpeg" alt=""><span>CSS</span></div>
+                    <div class="skill-item"><img src="js.jpeg" alt=""><span>JavaScript</span></div>
+                    <div class="skill-item"><img src="react.jpeg" alt=""><span>React</span></div>
                 </div>
             </div>
             <div class="skill">
                 <h4>Backend Development</h4>
-                <div class="box-1">
-                    <div class="box"> <img src="" alt=""></div>
-                    <div class="box"> <img src="" alt=""></div>
+                <div class="skill-items">
+                    <div class="skill-item"><img src="node.jpeg" alt=""><span>Node.js</span></div>
+                    <div class="skill-item"><img src="py.jpeg" alt=""><span>Python</span></div>
                 </div>
-                <div class="box-1">
-                    <div class="box"> <img src="" alt=""></div>
-                    <div class="box"> <img src="" alt=""></div>
+            </div>
+            <div class="skill">
+                <h4>Data Storage</h4>
+                <div class="skill-items">
+                    <div class="skill-item"><span class="database-mark mysql-mark" aria-hidden="true">SQL</span><span>MySQL</span></div>
+                    <div class="skill-item"><span class="database-mark mongo-mark" aria-hidden="true">DB</span><span>MongoDB</span></div>
                 </div>
             </div>
             <div class="skill">
                 <h4>Version Control</h4>
-                <div class="box-1">
-                    <div class="box"> <img src="" alt=""></div>
-                    <div class="box"> <img src="" alt=""></div>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <svg class="skill-icon git-icon" viewBox="0 0 48 48" role="img" aria-label="Git"><path d="M44.2 21.6 26.4 3.8a3.8 3.8 0 0 0-5.4 0l-3.7 3.7 4.7 4.7a5.3 5.3 0 0 1 6.7 6.7l4.5 4.5a5.3 5.3 0 1 1-3.2 3.1l-4.2-4.2v11a5.3 5.3 0 1 1-4.3-.2V21.8a5.3 5.3 0 0 1-2.9-6.8l-4.6-4.6L3.8 21.6a3.8 3.8 0 0 0 0 5.4l17.8 17.8a3.8 3.8 0 0 0 5.4 0l17.2-17.2a4.2 4.2 0 0 0 0-6Z"/></svg>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <svg class="skill-icon github-icon" viewBox="0 0 24 24" role="img" aria-label="GitHub"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.2.8-.6v-2.1c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.3-.8 2.2-.8.2-.7.5-1.1.8-1.4-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 1.1a10.4 10.4 0 0 1 5.5 0c2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.7 1.1 2.9 0 4.3-2.6 5.2-5.1 5.5.4.3.8 1 .8 2v3c0 .4.2.7.8.6A11.1 11.1 0 0 0 12 .9Z"/></svg>
+                        <span>GitHub</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -138,26 +155,41 @@
         </div>
     </section>  
     <section class="contact" id="cont">
-        <h3>Contact Me</h3>
-        <div class="form">
-            <form action="" method="post">
-            <div class="input-field">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <p id="NaError">error message</p>
+        <div class="contact-inner">
+            <div class="contact-copy">
+                <p class="contact-eyebrow">Contact</p>
+                <h2>Have a project<br><span>in mind?</span></h2>
+                <p>Have an opportunity or an idea you’d like to discuss? Send me a message and I’ll get back to you.</p>
+                <div class="contact-prompt"><span aria-hidden="true">✉</span><span><strong>Let’s start a conversation</strong><small>I’m open to junior roles and collaborations.</small></span></div>
             </div>
-            <div class="input-field">
-                <input type="email" name="email" placeholder="Your Email" required>
-                <p id="EmError">error message</p>
+            <div class="form">
+                <form action="" method="post">
+                    <label for="contact-name">Your name</label>
+                    <input id="contact-name" type="text" name="name" placeholder="e.g. Alex Johnson" >
+                    <label for="contact-email">Email address</label>
+                    <input id="contact-email" type="email" name="email" placeholder="you@example.com" >
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" placeholder="Tell me a little about what you have in mind…" ></textarea>
+                    <button class="contact-submit" type="submit">Send message <span aria-hidden="true">↗</span></button>
+                </form>
             </div>
-            <div class="input-field">
-                <textarea name="message" placeholder="write a message" id=""></textarea>
-                <p id="mesError">error message</p>
-            </div>
-            <div class="batn"><button type="submit">SUBMIT</button></div>
-        </form>
         </div>
     </section>
-    <footer>
+    <footer class="site-footer">
+        <a class="footer-brand" href="#hero">Silent<em>Mover</em></a>
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#prs">Projects</a>
+            <a href="#cont">Contact</a>
+        </nav>
+        <div class="social-links" aria-label="Social media links">
+            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        </div>
         <p>&copy; 2026 SilentMover. All rights reserved.</p>
     </footer>
 </body>
